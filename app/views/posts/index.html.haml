@@ -1,31 +1,18 @@
-%h1
-  .content_title 
-    Listing posts
+.content_title 
+  Listing posts
 
-%table
-  %tr
-    %th 
-  %tr
-    %th
-    %th
-    %th
-    %th
 
-  - @posts.each do |post|
-    %tr
-      %td
-        .post_title
-          = post.title
-    %tr
-      %td
-        .content_post
-          = post.content
+- @posts.each do |post|
+  .post_title
+    = post.title
+  .content_post
+    = post.content
     
-      %td=link_to 'Show', post
-      %td=link_to 'Edit', edit_post_path(post)
-      %td=link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  .show_edit_destroy
+    =link_to 'Show', post
+    =link_to 'Edit', edit_post_path(post)
+    =link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
 
 .new_post
-  = link_to 'New Post', new_post_path
+  =link_to 'New Post', new_post_path
