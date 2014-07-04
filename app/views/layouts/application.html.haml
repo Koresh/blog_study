@@ -1,9 +1,38 @@
-!!!
 %html
   %head
-    %title BlogStudy
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %title 
+      BlogStudy
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+    = stylesheet_link_tag    'blog', media: 'all', 'data-turbolinks-track' => true 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+  
+  .new_title
+    %h1
+      Title 
   %body
-    = yield
+    .str
+      .sidebar
+        %h2
+          SideBar
+        %h3
+          .in_sidebar
+            %a{href:"#"}new1
+          .in_sidebar
+            %a{href:"#"}new2
+          .in_sidebar
+            %a{href:"#"}new3
+          .in_sidebar
+            %a{href:"#"}new4
+          .in_sidebar
+            %a{href:"#"}new5
+          .in_sidebar
+            %a{href:"#"}new6
+
+      .blog
+        = yield
+  
+      %footer
+        .h3
+          .foot_copy
+            (c)copy

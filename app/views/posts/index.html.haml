@@ -1,21 +1,31 @@
-%h1 Listing posts
+%h1
+  .content_title 
+    Listing posts
 
 %table
   %tr
-    %th Title
-    %th Content
+    %th 
+  %tr
+    %th
     %th
     %th
     %th
 
   - @posts.each do |post|
     %tr
-      %td= post.title
-      %td= post.content
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td
+        .post_title
+          = post.title
+    %tr
+      %td
+        .content_post
+          = post.content
+    
+      %td=link_to 'Show', post
+      %td=link_to 'Edit', edit_post_path(post)
+      %td=link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Post', new_post_path
+.new_post
+  = link_to 'New Post', new_post_path
