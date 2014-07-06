@@ -1,21 +1,19 @@
-%h1 Listing posts
+.row
+  .small-4
+    qwerty
+  .small-4
+    qwerty
+  .small-4
+    .row_1
+      qwerty
+    .row_1
+      qwerty
+.row
+  .small-6
+    qwerty
+  .small-6
+    .row_1
+      qwerty
+    .row_1
+      qwerty
 
-%table
-  %tr
-    %th Title
-    %th Content
-    %th
-    %th
-    %th
-
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.content
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Post', new_post_path
