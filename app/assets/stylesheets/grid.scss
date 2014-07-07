@@ -1,0 +1,29 @@
+$columns: 12;
+$width: 1200px;
+$margin_right: 10px;
+$column_width: (-11*$margin_right+$width)/$columns;
+
+.row{
+  width: 1200px;
+  margin: 0px auto;
+  display: block;
+  float: left;
+}
+
+@for $i from 1 through $columns{
+.small_#{$i}{
+  display: inline;
+  float: left;
+  margin-right: $margin_right;
+  width: $i*$column_width;
+  background: #33CCCC;
+  }
+}
+.small_12{
+  float: left;
+  display: inline;
+  margin-right: 0px;
+  width: $column_width*12;
+ 
+}
+
