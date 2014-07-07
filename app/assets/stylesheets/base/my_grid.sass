@@ -1,0 +1,36 @@
+$columns: 12
+$width: 980px
+$margin_right: 20px
+$column_width: 63px
+
+
+.container
+  width: $width
+  margin: 0 auto
+
+.row
+  margin-bottom: 20px
+  &:after
+    display: block
+    content: '.'
+    height: 0px
+    visibility: hidden
+    clear: both
+
+
+[class*="small"]
+  float: left
+  display: inline
+  margin-right: $margin_right
+  
+
+[class*="small"]:last-child
+  margin-right: 0px
+  float:right
+
+
+@for $i from 1 through 12
+  .small_#{$i}
+    width: -$margin_right+$i*$column_width+$i*$margin_right
+
+

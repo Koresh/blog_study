@@ -13,12 +13,16 @@
     .str
       .blog
         .sidebar
-          .sidebar_title
-            SideBar
-          .link_in_sidebar
-            %a{href:"#"}Mrmrmr
-          .link_in_sidebar
-            %a{href:"#"}Murmurmur
+          %nav
+            %ul
+              %li
+                %a{href:"#"}link 1
+              %li
+                %a{href:"#"}link 2
+              %li
+                %a{href:"#"}link 3
+              %li
+                %a{href:"#"}link 4
 
        
         = yield
@@ -27,10 +31,11 @@
         .h3
           .foot_copy
             .row
-              .small_1
+              .small_11
                 (c)copy
-              .small_5
+              .small_1
                 2014
             .row
               .small_3
                 (123)-45-67-89 
+                
