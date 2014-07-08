@@ -7,21 +7,20 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   
-  .row.new-title
+  .row
+  .column.small-12.new-title
     BlogStudy
   %body
     .row
       .column.small-3.sidebar
-        %nav
-          %ul
-            %li
-              %a{href:"#"}link 1
-            %li
-              %a{href:"#"}link 2
-            %li
-              %a{href:"#"}link 3
-            %li
-              %a{href:"#"}link 4
+        .sidebar-menu
+          %a{href:"#"}link 1
+        .sidebar-menu
+          %a{href:"#"}link 2
+        .sidebar-menu
+          %a{href:"#"}link 3
+        .sidebar-menu
+          %a{href:"#"}link 4
 
       .column.small-9.blog
         = yield
@@ -29,23 +28,11 @@
       %footer
         .column.small-6
           (c)copy copy copy copy 
-          (c)copy copy copy copy 
-          (c)copy copy copy copy 
-          (c)copy copy copy copy 
-          (c)copy copy copy copy 
-          (c)copy copy copy copy 
-          (c)copy copy copy copy 
-          (c)copy copy copy copy 
         .column.small-6
           2014
           .row
             .column.small-8
               (c)copy copy copy copy ccccc
-              (c)copy copy copy copy cccccccc
-              (c)copy copy copy copy cccc
-              (c)copy copy copy copy cccccc
             .column.small-4
-              2014
-              2014
               2014
                 

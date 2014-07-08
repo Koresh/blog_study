@@ -1,4 +1,4 @@
-.row.content-title 
+.row.column.small-12.content-title 
   Listing posts
 
 
@@ -14,6 +14,6 @@
       =link_to 'Edit', edit_post_path(post)
       =link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-.row
+.row.column.small-12
   .new-post
     =link_to 'New Post', new_post_path

@@ -6,9 +6,13 @@ $visited_link_color: #ff9900
 $active_link_color: #990033
 $sidebar_link_color: #fff
 $sidebar_visited_link_color: #fff
-$sidebar_active_link_color: #AFEEEE   
+$sidebar_active_link_color: #AFEEEE 
+$sidebar_hover_link_color: #fff 
 $post_title_color: #48D1CC
 $foot_color: #c0c0c0
+$hover_link_color: #AFEEEE  
+$sidebar_hover_link_background_color: #AFEEEE 
+$show_edit_destroy_link_hower_color: #48D1CC
 
 =large-text
   :font
@@ -16,7 +20,6 @@ $foot_color: #c0c0c0
 
 .new-title
   +large-text
-  width: 980px
   background: $new_title_color
   text-align: center
   padding-top: 20px
@@ -29,58 +32,66 @@ $foot_color: #c0c0c0
   +large-text
   background: $sidebar_color
   text-align: center 
-  list-style: none  
-  nav
-    ul
-      li 
-        a
-          text-decoration: none
-          font-size: 20px
-          text-align: center
-          margin-bottom: 1px
-          color: $sidebar_link_color
-          &:visited
-            color: $sidebar_visited_link_color
-          &:active
-            color: $sidebar_active_link_color                                             
+  font-size: 18px                                         
 
-.sidebar
-  nav
-    ul
-      li
-        margin: 10px
+.sidebar-menu
+  a
+    padding: 10px
+    display: block
+    color: #fff
+    cursor: pointer
+    &:visited
+      color: $sidebar_visited_link_color
+    &:active
+      color: $sidebar_active_link_color
+    &:hover
+      color: $sidebar_hover_link_color
+      background: $sidebar_hover_link_background_color
+.sidebar-menu a:hower
+  background: red
+  color: red
 
 .blog
   +large-text
-  background: $blog_color                                                          
+  background: $blog_color                                                     
                                                                    
 
 .content-title
-  padding-left: 40px
   font-size: 30px
 
 .post-title
   font-weight: bold
-  padding-left: 60px
   color: $post_title_color
 
 .content-post
-  padding-left: 40px
   padding-top: 10px
   padding-bottom: 10px
-  padding-right: 40px
   text-align: justify 
 
 .show-edit-destroy
   paddind-button: 10px
   text-align: center
-  width: 100%
+  a
+    color: $link_color
+    &:visited
+      color: $visited_link_color
+    &:active
+      color: $active_link_color
+    &:hover
+      color: $show_edit_destroy_link_hower_color
 
 .new-post
-  padding-left: 40px
   padding-top: 20px
   padding-bottom: 20px
   font-size: 20px
+  a
+    color: $link_color
+    &:visited
+      color: $visited_link_color
+    &:active
+      color: $active_link_color
+    &:hover
+      color: $hover_link_color
 
 .foot-copy
   +large-text
@@ -89,13 +100,5 @@ $foot_color: #c0c0c0
   font-size: 16px
   font-weight:bold
 
-.one-post
-  margin: 10px
 
-a
-  text-decoration: none
-  color: $link_color
-  &:visited
-    color: $visited_link_color
-  &:active
-    color: $active_link_color
+
