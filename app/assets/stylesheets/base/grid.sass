@@ -1,27 +1,26 @@
-//*
-  //box-sizing: border-box
-
-.row 
+* 
+  box-sizing: border-box
+.row
   width: 1000px
   margin: 0 auto
-  margin-top: 50px
-  //border: 1px solid black
-.row_1
-  width: 100%
-  //border: 1px solid black
+  margin-top: 30px
+  border: 1px solid black
 
+.clear
+  clear: both
 
-
-
+.row
+  .row
+    width: auto
+    margin-top: 0
+    
 .small-4
   float: left
+  background: orange
   width: percentage(1/3)
-  //border: 1px solid black
-  background-color: #FF9900
-
 .small-6
   float: left
-  width: 50%
-  //border: 1px solid black
-  background-color: #00CC99
+  background: blue
+  width: percentage(1/2)
+  height: inherit
 
