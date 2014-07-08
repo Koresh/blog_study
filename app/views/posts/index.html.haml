@@ -1,18 +1,19 @@
-.content-title 
+.row.content-title 
   Listing posts
 
 
 - @posts.each do |post|
-  .post-title
-    = post.title
-  .content-post
-    = post.content
+  .row
+    .column.small-12.post-title
+      = post.title
+    .column.small-12.content-post
+      = post.content
     
-  .show-edit-destroy
-    =link_to 'Show', post
-    =link_to 'Edit', edit_post_path(post)
-    =link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    .column.small-12.show-edit-destroy
+      =link_to 'Show', post
+      =link_to 'Edit', edit_post_path(post)
+      =link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-
-.new-post
-  =link_to 'New Post', new_post_path
+.row
+  .new-post
+    =link_to 'New Post', new_post_path

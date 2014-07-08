@@ -1,18 +1,33 @@
+$columns: 12
+$padding: 30px 
+$max_width:  980px
+
+*
+  box-sizing: border-box
 
 .row
-  float: left
-  width: 1200px
-  margin:auto
+  margin: 0 auto
+  max-width: $max_width
+  .row
+    margin:
+      left: -$padding/2
+      right: -$padding/2
+
 
 .row::after
-  content: "."
+  content: " "
   display: block
   height: 0
   clear: both
+  
 
-@for $i from 1 through 12
+.column
+  padding: $padding/2
+  float: left
+  text-align: justify
+ 
+
+
+@for $i from 1 through $columns
   .small-#{$i}
-    float: left
-    width: $i*100%/12
-    background: #999
-    padding: 1%
+    width: percentage($i/$columns)
