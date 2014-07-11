@@ -1,6 +1,8 @@
 $columns: 12
 $padding: 30px 
 $max_width:  980px
+$offsets: 11
+$small_width: 0
 
 *
   box-sizing: border-box
@@ -14,7 +16,7 @@ $max_width:  980px
       right: -$padding/2
 
 
-.row::after
+.row:after
   content: " "
   display: block
   height: 0
@@ -24,10 +26,25 @@ $max_width:  980px
 .column
   padding: $padding/2
   float: left
-  text-align: justify
- 
+  border: 1px solid blue
+
+.small-sentered
+  margin: 0 auto
+  float: none
+  background: pink
+  border: 1px solid green 
+  overflow: auto
+
 
 
 @for $i from 1 through $columns
   .small-#{$i}
     width: percentage($i/$columns)
+
+
+@for $j from 0 through $offsets
+  .small-offset-#{$j}
+    border: 1px solid black
+    margin:
+      left: percentage($j/$columns)
+

@@ -6,10 +6,11 @@
     = stylesheet_link_tag    'blog', media: 'all', 'data-turbolinks-track' => true 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  
+ 
   .row
-  .column.small-12.new-title
-    BlogStudy
+  .column.small-12
+    .new-title
+      BlogStudyrow
   %body
     .row
       .column.small-3.sidebar
@@ -26,13 +27,18 @@
         = yield
     .row.foot-copy
       %footer
-        .column.small-6
-          (c)copy copy copy copy 
-        .column.small-6
-          2014
-          .row
-            .column.small-8
-              (c)copy copy copy copy ccccc
-            .column.small-4
-              2014
-                
+        .column.small-7.small-sentered
+          (c)column.small-7.small-centered
+        .column.small-10.small-offset-2
+          (c)small-10.small-offset-2
+        .column.small-2
+          2
+        .column.small-10
+          (c)copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy
+        .column.small-1
+          1
+        .column.small-10.small-offset-1
+          (c)small-10.small-offset-1
+        .column.small-7.small-sentered
+          (c)column.small-7.small-centered
+                      

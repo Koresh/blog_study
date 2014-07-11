@@ -21,18 +21,20 @@ $show_edit_destroy_link_hower_color: #48D1CC
 .new-title
   +large-text
   background: $new_title_color
-  text-align: center
-  padding-top: 20px
-  padding-bottom: 20px
-  font-size: 50px
-  font-weight: bold
+  text:
+    align: center
+  font:
+    size: 50px
+    weight: bold
   color: #A9A9A9
 
 .sidebar
   +large-text
   background: $sidebar_color
-  text-align: center 
-  font-size: 18px                                         
+  text:
+    align: center 
+  font:
+    size: 18px                                         
 
 .sidebar-menu
   a
@@ -56,21 +58,27 @@ $show_edit_destroy_link_hower_color: #48D1CC
   background: $blog_color                                                     
                                                                    
 
-.content-title
-  font-size: 30px
+.posts-title
+  font:
+    size: 30px
 
-.post-title
-  font-weight: bold
+h1
+  font:
+    size: 20px
+    weight: bold
   color: $post_title_color
+  margin: 0px
+
 
 .content-post
-  padding-top: 10px
-  padding-bottom: 10px
-  text-align: justify 
+  text:
+    align: justify 
 
 .show-edit-destroy
-  paddind-button: 10px
-  text-align: center
+  paddind:
+    bottom: 10px
+  text:
+    align: center
   a
     color: $link_color
     &:visited
@@ -81,9 +89,11 @@ $show_edit_destroy_link_hower_color: #48D1CC
       color: $show_edit_destroy_link_hower_color
 
 .new-post
-  padding-top: 20px
-  padding-bottom: 20px
-  font-size: 20px
+  padding:
+    top: 20px
+    bottom: 20px
+  font:
+    size: 20px
   a
     color: $link_color
     &:visited
@@ -97,8 +107,9 @@ $show_edit_destroy_link_hower_color: #48D1CC
   +large-text
   background: $foot_color
   color: #fff
-  font-size: 16px
-  font-weight:bold
+  font:
+    size: 16px
+    weight: bold
 
 
 
