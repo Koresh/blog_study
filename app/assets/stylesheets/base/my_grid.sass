@@ -1,7 +1,6 @@
 $columns: 12
 $padding: 30px 
 $max_width:  980px
-$offsets: 11
 $small_width: 0
 
 *
@@ -26,14 +25,11 @@ $small_width: 0
 .column
   padding: $padding/2
   float: left
-  border: 1px solid blue
 
 .small-sentered
   margin: 0 auto
   float: none
-  background: pink
-  border: 1px solid green 
-  overflow: auto
+  clear: both
 
 
 
@@ -42,9 +38,8 @@ $small_width: 0
     width: percentage($i/$columns)
 
 
-@for $j from 0 through $offsets
+@for $j from 0 through -1+$columns
   .small-offset-#{$j}
-    border: 1px solid black
     margin:
       left: percentage($j/$columns)
 
