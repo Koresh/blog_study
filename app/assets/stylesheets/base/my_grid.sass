@@ -1,6 +1,6 @@
-$columns: 12
-$padding: 30px 
-$max_width:  980px
+$columns: 8
+$padding: 20px 
+$max_width:  1180px
 $small_width: 0
 
 *
@@ -36,7 +36,6 @@ $small_width: 0
 @for $i from 1 through $columns
   .small-#{$i}
     width: percentage($i/$columns)
-
 
 @for $j from 0 through -1+$columns
   .small-offset-#{$j}

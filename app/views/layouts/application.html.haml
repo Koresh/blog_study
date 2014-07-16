@@ -6,40 +6,199 @@
     = stylesheet_link_tag    'blog', media: 'all', 'data-turbolinks-track' => true 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
- 
-  .row
-  .column.small-12
-    .new-title
-      BlogStudy
-.row
-  %body
-    .row
-      .column.small-3.sidebar
-        .sidebar-menu
-          %a{href:"#"}link 1
-        .sidebar-menu
-          %a{href:"#"}link 2
-        .sidebar-menu
-          %a{href:"#"}link 3
-        .sidebar-menu
-          %a{href:"#"}link 4
 
-      .column.small-9.blog
-        = yield
-    .row.foot-copy
-      %footer
-        .column.small-7.small-sentered
-          (c)column.small-7.small-centered
-        .column.small-10.small-offset-2
-          (c)small-10.small-offset-2
+    .section-nav
+      .row
+        %ul
+          .nav-content
+            %li
+              %a{href:"#"}Restaraunt
+          .nav-content
+            %li
+              %a{href:"#"}About us
+          .nav-content
+            %li
+              %a{href:"#"}Conditions
+          .nav-content
+            %li
+              %a{href:"#"}Contact
+
+          .nav-box
+            .box-price
+              .box
+              .price
+                1200
+          .nav-button-lang
+            %input{type: "radio", value:"ENG", id: "eng",name: "lang"}
+            %label{for: "eng"}
+              ENG
+            %input{type: "radio", value:"PУС", id: "rus",name: "lang"}
+            %label{for: "rus"}
+              РУС
+
+    .section-social
+      .row
         .column.small-2
-          2
-        .column.small-10
-          (c)copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy
+          .social-logo
+        .column.small-2
+          .social-phone
         .column.small-1
-          1
-        .column.small-10.small-offset-1
-          (c)small-10.small-offset-1
-        .column.small-7.small-sentered
-          (c)column.small-7.small-centered
+          .social-vk-fb
+        .column.small-2.small-offset-1.social-welcome
+          .stuard
+          .text  
+            .welcome-text
+              Welcome on board, 
+            .welcome-name
+              Diana
+            .exit
+
+    .section-slogan
+      .row
+        .column.small-8
+          %h1
+            More than 
+            .slogan-important-part
+              %strong
+                100 
+            of the 
+            .slogan-important-part
+              %strong
+                best restaurants 
+            around the world!
+    
+    .section-country-city
+      .row.country-city-background
+        .column.small-6.small-offset-2
+          %input{type: "text", value:"Country"}
+          %input{type: "text", value:"City"}
+          %input{type: "button", value:"SHOW ME"}
+
+
+    .section-delicious-fly
+      .row
+        .column.small-8
+          .delicious-fly-img
+   
+  %body
+    = yield
+
+  %footer
+    .section-featuring
+      .row
+        .column.small-1
+          .featuring-www
+        .column.small-1
+          .featuring-visa
+        .column.small-1
+          .featuring-clock
+        .column.small-3
+          .featuring-24_7
+        .column.small-1
+          .featuring-mail
+        .column.small-1
+          .featuring-car
+
+    .section-most-popular
+      .row.most-popular-text
+        .column.small-2
+          Most popular restaurants
+      .row
+        .column.small-1
+          .cafe-gallery
+        .column.small-1
+          .shinok
+        .column.small-1
+          .turandot
+        .column.small-1
+          .mario
+        .column.small-1
+          .chaihona
+        .column.small-1
+          .gq
+        .column.small-1
+          .compas
+        .column.small-1
+          .u2-restaurant
+
+    .section-coming-soon
+      .row
+        .column.small-2.small-offset-2.app_submit
+          %input{type: "submit", value: ""}
+        .column.small-2.andr_submit
+          %input{type: "submit", value: ""}
+
+    .section-references-our-news
+      .row
+        .column.small-4.heading-text
+          References
+        .column.small-2.heading-text
+          Our news
+      .row
+        .column.small-1
+          .nomad-aviation
+        .column.small-3.review-text
+          «SkyPoint has definitely improved our catering ordering process and helps us save time. The platform is easy to use, provides exact cost of the order including delivery and has!»
+          .review-autor-name
+            Kristel Pereira, Chief Flight Attendant
+
+        .column.small-2
+          .news
+            .news-data
+              1 April 2013
+            .news-text
+              %a{href:"#"}Now SkyPoint work with New York restaraunts Pushkin!
+          .news
+            .news-data
+              1 April 2013
+            .news-text
+              %a{href:"#"}Now SkyPoint work with New York restaraunts Pushkin!
+
+        .column.small-2
+          .news
+            .news-data
+              1 April 2013
+            .news-text
+              %a{href:"#"}Now SkyPoint work with New York restaraunts Pushkin!
+          .news
+            .news-data
+              1 April 2013
+            .news-text
+              %a{href:"#"}Now SkyPoint work with New York restaraunts Pushkin!
+
+    .section-contacts-address
+      .row.contacts-address-container
+        .column.small-2
+          .plan-and-brand-container
+            .plan
+            .contacts-address-text
+              © 2011-2013 
+              .important-text
+                SkyPoint LLC
+
+        .column.small-4
+          .address-container
+            .balun
+            .contacts-address-text
+              109316, Russia, Moscow, Ostapovskiy proyezd, 5/1, office 802;
+              %br 
+              Phone: 
+              .important-text
+                +7 (495) 215-01-15; 
+              E-mail: 
+              %a{href:"#"}order@sky-point.net
+
+
+        .pentagon-and-support-container
+          .pentagon-1
+          .contacts-address-text.support-text
+            Designed and support 
+            %a{href:"#"}Factory #1
+
+
+
+
+
+
+
                       

@@ -1,0 +1,75 @@
+$nav_background_color: #23bfd9
+$nav_background_color_active: #29daf7
+
+.section-nav
+  background: $nav_background_color
+
+ul
+  .nav-content
+    padding: 10px
+    display: inline-block
+    font-size: 14pt
+    font-family: Century Gothic
+    &:hover
+      background: $nav_background_color_active
+    li
+      list-style-type: none
+    a
+      text-decoration: none
+      color: #fff
+      padding: 0px
+
+
+.nav-button-lang
+  float: right
+  padding: 5px
+  margin-right: 40px
+  input
+    display: none
+    &:checked+label
+      background: #fff
+      color: $nav_background_color
+
+  label
+    margin-top: 4px
+    margin-bottom: 10px
+    font-size: 10pt
+    color: #fff
+    padding-left: 10px
+    padding-right: 10px
+    width: 60px
+    height: 20px
+    background-color: $nav_background_color
+    border-radius: 30px
+
+.nav-box
+  padding: 
+    left: 20px
+    right: 20px
+  display: inline-block
+  float: right
+  background: $nav_background_color_active
+  color: #fff
+
+.box-price
+  margin: 0 auto
+  padding:
+    top: 7px
+    bottom: 8px
+
+.box
+  display: inline-block
+  width: 22px
+  height: 20px
+  background:
+    image: image-url('sprait.png')
+    position: -556px 0
+
+.price
+  display: inline-block
+  color: #fff
+  font-family: Arial
+  font-size: 18pt
+  margin:
+    left: 10px
+
