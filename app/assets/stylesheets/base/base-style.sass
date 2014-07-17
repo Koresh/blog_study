@@ -1,18 +1,11 @@
-@import 'settings'
-
 $row-width: 1200px !default
 $column-count: 12 !default
-$pad: 30px  !default
-$background-color: #44D6FF
+$indent: 30px  !default
+$size: percentage(1/$column-count)
+$small: 720px !default
+$medium: 900px !default 
+$large: 900px !default
 
-
-
-
-
-
-
-
- 
 //
 *
   box-sizing: border-box
@@ -24,29 +17,28 @@ $background-color: #44D6FF
   
   .row
     margin:
-      left: - $pad/2
-      right: - $pad/2
+      left: - $indent/2
+      right: - $indent/2
 
 
 .column
   float: left
   padding:
-    left: $pad/2
-    right: $pad/2
+    left: $indent/2
+    right: $indent/2
   
   &:after
     content: ''
     clear: both
     display: table  
-    
-.small
-  @for $i from 1 through $column-count
-    &-#{$i}
-      width: percentage($i/$column-count)
+
+
+@media only screen and (min-width: $small)
+  .small
+    @for $i from 1 through $column-count
+      &-#{$i}
+        width: $size * $i
   
-        
-.modifier-color
-  background: $background-color
   
 .small-centerd
   margin: 0 auto
@@ -54,7 +46,45 @@ $background-color: #44D6FF
   float: none
     
 .small-offset
-  @for $i from 0 through $column-count - 1
-    &-#{$i}
+  $j: $i - 1
+    &-#{$j}
       margin:
-        left: percentage($i/$column-count)
+        left: $size * $j
+
+
+@media only screen and (min-width: $medium)
+  .medium
+    @for $i from 1 through $column-count
+      &-#{$i}
+        width: $size * $i
+    
+  
+.medium-centerd
+  margin: 0 auto
+  clear: both
+  float: none
+    
+.medium-offset
+  $j: $i - 1
+    &-#{$j}
+      margin:
+        left: $size * $j
+
+
+@media only screen and (max-width: $large)
+  .large
+    @for $i from 1 through $column-count
+      &-#{$i}
+        width: $size * $i
+  
+  
+.large-centerd
+  margin: 0 auto
+  clear: both
+  float: none
+    
+.large-offset
+  $j: $i - 1
+    &-#{$j}
+      margin:
+        left: $size * $j
