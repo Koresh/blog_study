@@ -1,23 +1,29 @@
-.row.column.small-12
-  .posts-title
-    Listing posts
-
-
-- @posts.each do |post|
+.section-content 
   .row
-    .column.small-8
-      %image_tag 'delicious_fly.png'
-      %h1
-        = post.title
-    .column.small-12.content-post
-      = post.content
-    
-    .column.small-12.show-edit-destroy
-      =link_to 'Show', post
-      =link_to 'Edit', edit_post_path(post)
-      =link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    .column.small-4
+      =image_tag ("delicious_fly.jpg")
+    .column.small-4.text-container
+      %h1 
+        Delicious flight.
+        %br
+          With SkyPoint.
+      .sky-point-description-text.content-important-text
+        SkyPoint provides inflight catering at premium flight aircrafts. Our clients got used to high quality, accuracy and irrespective!
+      .sky-point-less-important-description-text
+        Business class clients appreciate comfort and mind their status, whether it be appearance, means of transportation or any other material wealth.
 
-.row
-  .column.small-12
-    .new-post
-      =link_to 'New Post', new_post_path
+      .important-figures-container.content-important-text
+        More than   
+        .color-figure
+          2 500 
+        satisfied customersan! 
+
+      .skypoint-promise
+        SkyPoint will do its best to add “flavor” to your trip!
+
+      .read-more-link
+        =link_to 'Read more about SkyPoint →', new_post_path
+
+
+
+

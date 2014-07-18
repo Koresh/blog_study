@@ -4,18 +4,76 @@
     size: 14pt
   height: 130 px
   input
+    position: relative
     padding:
       left: 14px
-    color: #e1e1e1
     border:
       radius: 10px
     width: 220px
     height: 50px
-    margin:
-      right: 20px
+    border: none
   input[type=button]
+    border: none
     color: #fff
     background: #29daf7
+    display: inline-block
+    float: left
+  list-style: none
+  li
+    float: left
+    display: block
+    color: #e1e1e1
+    position: relative
+  select
+    border:
+      radius: 10px
+    width: 220px
+    height: 50px
+    border: none
+    color: #e1e1e1
+    position: relative
+    -webkit-appearance: none
+    option
+      padding:
+        left: 14px
+      color: #e1e1e1
+.select_button
+  width: 18px
+  height: 14px
+  background: red
+  display: inline-block
+  position: relative
+.select_button:after
+  display: inline-block
+  content: url(select_button.png)
+  width: 18px
+  height: 14px
+  top: 0px
+  left: -34px
+  position: absolute      
+
+
+.select-copy-container
+  display: inline-block
+  position: relative
+  color: #e1e1e1
+  border:
+    radius: 10px
+  width: 220px
+  height: 50px
+  border: none
+  background: #fff
+  &:after
+    display: block
+    content: url(select-button.png)
+    width: 18px
+    height: 14px
+    top: 18px
+    left: 188px
+    position: absolute
+
+.select-container
+  display: inline-block
 
 .country-city-background
   background:
@@ -23,5 +81,7 @@
     image: image-url('sky.png')
     repeat: no-repeat
   padding:
-    top: 30px
+    top: 40px
     bottom: 30px
+
+

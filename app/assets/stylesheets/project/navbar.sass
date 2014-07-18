@@ -6,7 +6,6 @@ $nav_background_color_active: #29daf7
 
 ul
   .nav-content
-    padding: 10px
     display: inline-block
     font-size: 14pt
     font-family: Century Gothic
@@ -17,13 +16,17 @@ ul
     a
       text-decoration: none
       color: #fff
-      padding: 0px
 
+
+.nav-padding-for-menu
+  padding: 10px
 
 .nav-button-lang
   float: right
   padding: 5px
-  margin-right: 40px
+  margin:
+    right: 40px
+    top: 8px
   input
     display: none
     &:checked+label
@@ -43,33 +46,75 @@ ul
     border-radius: 30px
 
 .nav-box
-  padding: 
-    left: 20px
-    right: 20px
-  display: inline-block
   float: right
   background: $nav_background_color_active
   color: #fff
-
-.box-price
-  margin: 0 auto
   padding:
-    top: 7px
-    bottom: 8px
+    left: 20px
+    right: 4px
+
+.select-container
+  float: right
+  padding:
+    top: 11px
+    bottom: 12px
+  select
+    border:
+      radius: 10px
+    width: 32px
+    height: 20px
+    border: none
+    color: #29daf7
+    position: relative
+    -webkit-appearance: none
+    option
+      padding:
+        left: 14px
+      color: #e1e1e1
 
 .box
+  margin:
+    top: 12px
+    bottom: 6px
   display: inline-block
   width: 22px
   height: 20px
   background:
     image: image-url('sprait.png')
-    position: -556px 0
+    position: -556px 0px
 
 .price
+  float: right
+  background: $nav_background_color_active
   display: inline-block
   color: #fff
-  font-family: Arial
-  font-size: 18pt
-  margin:
-    left: 10px
+  font:
+    family: Arial
+  font-size: 18px
+  padding:
+    top: 10px
+    bottom: 10px
+  
+
+.little_select_button
+  width: 18px
+  height: 14px
+  background: transparent
+  display: inline-block
+  position: relative
+.little_select_button:after
+  display: inline-block
+  content: url(little_select_button.png)
+  width: 18px
+  height: 14px
+  top: 16px
+  left: 38px
+  position: absolute 
+
+.nav-select
+  float: right
+  background: $nav_background_color_active
+  color: #fff
+  padding:
+    right: 20px
 

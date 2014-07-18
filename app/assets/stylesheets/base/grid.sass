@@ -1,0 +1,71 @@
+$columns: 8
+$padding: 20px 
+$max_width:  1180px
+$small_width: 0
+
+@media screen and (max-width: 480px)
+  $max_width:  480px
+
+@media screen and (max-width: 767px)
+  $max_width:  767px
+
+@media screen and (min-width: 980px)
+  $max_width:  1180px
+
+
+*
+  box-sizing: border-box
+
+.row
+  margin: 0 auto
+  max-width: $max_width
+  .row
+    margin:
+      left: -$padding/2
+      right: -$padding/2
+
+
+.row:after
+  content: " "
+  display: block
+  height: 0
+  clear: both
+  
+
+.column
+  padding: $padding/2
+  float: left
+
+.small-sentered
+  margin: 0 auto
+  float: none
+  clear: both
+
+
+
+@for $i from 1 through $columns
+  .small-#{$i}
+    width: percentage($i/$columns)
+
+@for $j from 0 through -1+$columns
+  .small-offset-#{$j}
+    margin:
+      left: percentage($j/$columns)
+
+@for $i from 1 through $columns
+  .medium-#{$i}
+    width: percentage($i/$columns)
+
+@for $j from 0 through -1+$columns
+  .medium-offset-#{$j}
+    margin:
+      left: percentage($j/$columns)
+
+@for $i from 1 through $columns
+  .large-#{$i}
+    width: percentage($i/$columns)
+
+@for $j from 0 through -1+$columns
+  .large-offset-#{$j}
+    margin:
+      left: percentage($j/$columns)

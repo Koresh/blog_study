@@ -8,33 +8,45 @@
     = csrf_meta_tags
 
     .section-nav
-      .row
-        %ul
-          .nav-content
-            %li
-              %a{href:"#"}Restaraunt
-          .nav-content
-            %li
-              %a{href:"#"}About us
-          .nav-content
-            %li
-              %a{href:"#"}Conditions
-          .nav-content
-            %li
-              %a{href:"#"}Contact
+      %ul
+        .nav-content.nav-padding-for-menu
+          %li
+            %a{href:"#"}Restaraunt
+        .nav-content.nav-padding-for-menu
+          %li
+            %a{href:"#"}About us
+        .nav-content.nav-padding-for-menu
+          %li
+            %a{href:"#"}Conditions
+        .nav-content.nav-padding-for-menu
+          %li
+            %a{href:"#"}Contact
 
-          .nav-box
-            .box-price
-              .box
-              .price
-                1200
-          .nav-button-lang
-            %input{type: "radio", value:"ENG", id: "eng",name: "lang"}
-            %label{for: "eng"}
-              ENG
-            %input{type: "radio", value:"PУС", id: "rus",name: "lang"}
-            %label{for: "rus"}
-              РУС
+        .nav-content.nav-select
+          %li
+            .select-container
+              %select{name: "menu", size: "1"}
+                %option{selected: "selected", value: "first"}
+                  $
+                %option{value: "second"}
+                  руб
+            .little_select_button
+        .nav-content.price
+          %li
+            1 200
+        .nav-content.nav-box
+          %li
+            .box
+             
+              
+        .nav-button-lang
+          %input{type: "radio", value:"ENG", id: "eng",name: "lang"}
+          %label{for: "eng"}
+            ENG
+          %input{type: "radio", value:"PУС", id: "rus",name: "lang"}
+          %label{for: "rus"}
+            РУC
+
 
     .section-social
       .row
@@ -69,16 +81,42 @@
     
     .section-country-city
       .row.country-city-background
-        .column.small-6.small-offset-2
-          %input{type: "text", value:"Country"}
-          %input{type: "text", value:"City"}
-          %input{type: "button", value:"SHOW ME"}
+        .column.small-2.small-offset-1
+          
+          .select-container
+            %select{name: "menu", size: "1",id:"country"}
+              %option{selected: "selected", value: "first"}
+                Country
+              %option{value: "second"}
+                Russia
+              %option{value: "third"}
+                Austria
+              %option{value: "fourth"}
+                France
+          .select_button
+
+        .column.small-2
+          .select-container
+            %select{name: "menu", size: "1"}
+              %option{selected: "selected", value: "first"}
+                City
+              %option{value: "second"}
+                Moscow
+              %option{value: "third"}
+                Kazan
+              %option{value: "fourth"}
+                Vienna
+              %option{value: "fourth"}
+                Verona
+          .select_button
+        .column.small-2
+          .select-container
+            %input{type: "button", value:"SHOW ME"}
 
 
-    .section-delicious-fly
-      .row
-        .column.small-8
-          .delicious-fly-img
+
+
+    
    
   %body
     = yield
@@ -194,6 +232,29 @@
           .contacts-address-text.support-text
             Designed and support 
             %a{href:"#"}Factory #1
+
+    .section-last-footer-links
+      .row
+        .column.small-3.my_cont
+          %ul
+            .footer-link.footer-link-margin
+              %li
+                %a{href:"#"}About us
+            .footer-link.footer-link-margin
+              %li
+                %a{href:"#"}Contacts
+            .footer-link.footer-link-margin
+              %li
+                %a{href:"#"}Help
+            .footer-link
+              %li
+                %a{href:"#"}Private police
+
+        .column.small-2.visa-and-mk-container
+          .master-kard
+          .visa
+          .we-accept-text
+            We accept
 
 
 
